@@ -1,2 +1,2 @@
 # HMM-decoder
-wwww
+A Decoder For Convolutional Codes
