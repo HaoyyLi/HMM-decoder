@@ -47,8 +47,8 @@ bersoft_test = dataset.bersoft(:,end-config.test_packnum+1:end);
 %%
 figure1 = figure;
 set(gcf,'unit','centimeters','position',[6 6 14 10]);
-set(gcf,'ToolBar','none','ReSize','off'); %移除工具条
-set(gcf,'color','w');%设置图窗颜色为白色
+set(gcf,'ToolBar','none','ReSize','off'); 
+set(gcf,'color','w');
 
 EbN0 = 0:1:12;
 semilogy(EbN0,mean(ber_test(1:13,:),2),'k--')
