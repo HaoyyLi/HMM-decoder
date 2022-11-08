@@ -39,15 +39,15 @@ The code uses repository from Qiuqiang Kong:
 .
 ├── dataset
     ├── AWGN.mat
-	├── Multipath.mat
-	└── RSC.mat
+    ├── Multipath.mat
+    └── RSC.mat
 ├── img
 ├── src
-	├── matlab-hmm
-	 	├── matlab-gmm
-	├── Config.m
-	├── HMM_Decoder.m
-	└── ...
+    ├── matlab-hmm
+	├── matlab-gmm
+    ├── Config.m
+    ├── HMM_Decoder.m
+    └── ...
 └── README.md 
 ```
 
