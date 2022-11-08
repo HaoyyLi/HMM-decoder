@@ -1,0 +1,9 @@
+clc;clear all;close all;
+%%
+global config
+config.K = 3;      % K: constraint length
+config.P = 3;      % P: the number of generator polynomial functions
+config.method = 'CONV';         % 
+config.train_packnum = 10;
+config.test_packnum = 1000;
+config.filename = 'E:\科研项目资料\小论文\大修\code\另起炉灶/数据_多径/CONV_775_2psk_1000.mat';
