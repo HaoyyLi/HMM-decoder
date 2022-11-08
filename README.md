@@ -2,7 +2,7 @@
 
 This repository is the MATLAB codes related to the following article: "Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior"
 
-[**Pre-Print：** Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior (arxiv.org)](https://arxiv.org/abs/2210.14749)
+[**Pre-Print：** arxiv.org](https://arxiv.org/abs/2210.14749)
 
 ## Abstract of the Article
 
@@ -21,40 +21,49 @@ Source code for HMM-Decoder.
 - Method: CONV or RSC
 - Channel: AWGN or Multipath
 
-#### Software platform
+### Software platform
 
 Matlab 2021a
 
-#### Requirement
+### Requirement
 
 The code uses repository from Qiuqiang Kong:
 
 - [matlab-hmm](https://github.com/qiuqiangkong/matlab-hmm)
 
-#### Contents of directories
+### Contents of directories
 
 ```
 .
-├── dev # latest working source code
-├── test_v1 # archived for old version https://arxiv.org/abs/1810.07181v3
-├── README.md 
-└── LICENSE
+├── dataset
+    ├── AWGN.mat
+	├── Multipath.mat
+	└── RSC.mat
+├── img
+├── src
+	├── matlab-hmm
+	 	├── matlab-gmm
+	├── Config.m
+	├── HMM_Decoder.m
+	└── ...
+└── README.md 
 ```
 
-#### Usage
+### Usage
 
 1. Download this repository
-2. Download [matlab-hmm](https://github.com/qiuqiangkong/matlab-hmm) and add it to `./src/matlab-hmm`.
-3. Run `Config.m` to setup the SIMULATION PARAMETERS.
-4. Run `HMM_Decoder.m` in MATLAB.
+2. Download the [dataset](https://drive.google.com/file/d/1hjPtdSbh-aOpDKWf-ddpNFzU-tW2_JD9/view?usp=share_link) and unzip to `./dataset`.
+3. Download [matlab-hmm](https://github.com/qiuqiangkong/matlab-hmm) and add to `./src/matlab-hmm`.
+4. Run `Config.m` to setup the SIMULATION PARAMETERS.
+5. Run `HMM_Decoder.m` in MATLAB.
 
-#### Results
+### Results
 
-If you want to get the figure in the paper, you would setup as follows:
+If you want to get the figure in the paper, you would setup as follows. 
 
-Figure 4(a): The BER of the standard Viterbi Decoder, HMM decoder and RNN decoder [16] using hard-decision and soft-decision respectively in AWGN
+**Note:** The result of `RNN Decoder` is the implementation of the ICLR2018 paper ['Communication algorithms via deep learning'](https://openreview.net/forum?id=ryazCMbR-). The official codes can be found in [yihanjiang/Sequential-RNN-Decoder](https://github.com/yihanjiang/Sequential-RNN-Decoder)
 
-channel.
+**Figure 4(a): The BER of the standard Viterbi Decoder, HMM decoder and RNN decoder using hard-decision and soft-decision respectively in AWGN channel.**
 
 ```matlab
 % Config.m
@@ -70,7 +79,7 @@ config.filename = './../dataset/AWGN.mat';
 
 
 
-Figure 4(b):  The BER of the standard Viterbi Decoder, HMM decoder and RNN decoder [16] using hard-decision and soft-decision respectively in multiple channel.
+**Figure 4(b):  The BER of the standard Viterbi Decoder, HMM decoder and RNN decoder using hard-decision and soft-decision respectively in multiple channel.**
 
 ```matlab
 % Config.m
@@ -84,13 +93,13 @@ config.filename = './../dataset/Multipath.mat';
 
 <img src="img/ber_multipath.png" alt="ber_multipath" style="zoom:6%;" />
 
-Figure 8:  The validity of the hybrid HMM decoder on the RSC code.
+**Figure 8:  The validity of the hybrid HMM decoder on the RSC code.**
 
-```
+```matlab
 % Config.m
 config.K = 3;      % K: constraint length
 config.P = 3;      % P: the number of generator polynomial functions
-config.method = 'CONV';         % CONV or RSC
+config.method = 'RSC';         % CONV or RSC
 config.train_packnum = 10;
 config.test_packnum = 1000;
 config.filename = './../dataset/RSC.mat';
