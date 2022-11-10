@@ -1,8 +1,6 @@
 ## Overview
 
-This repository is the MATLAB codes related to the following article: "Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior"
-
-[**Pre-Print：** arxiv.org](https://arxiv.org/abs/2210.14749)
+This repository is the MATLAB codes related to the following article: "[Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior](https://ieeexplore.ieee.org/document/9943994)"
 
 ![overview](img/overview.png)
 
@@ -39,15 +37,15 @@ The code uses repository from Qiuqiang Kong:
 .
 ├── dataset
     ├── AWGN.mat
-    ├── Multipath.mat
-    └── RSC.mat
+	├── Multipath.mat
+	└── RSC.mat
 ├── img
 ├── src
-    ├── matlab-hmm
-	├── matlab-gmm
-    ├── Config.m
-    ├── HMM_Decoder.m
-    └── ...
+	├── matlab-hmm
+	 	├── matlab-gmm
+	├── Config.m
+	├── HMM_Decoder.m
+	└── ...
 └── README.md 
 ```
 
@@ -116,11 +114,15 @@ config.filename = './../dataset/RSC.mat';
 If you use this repository in your research, please cite this paper.
 
 ```
-@article{li2022hybrid,
-  title={Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior},
-  author={Li, Haoyu and Wang, Xuan and Liu, Tong and Fang, Dingyi and Liu, Baoying},
-  journal={arXiv preprint arXiv:2210.14749},
-  year={2022}
+@ARTICLE{9943994,  
+    author={Li, Haoyu and Wang, Xuan and Liu, Tong and Fang, Dingyi and Liu, Baoying},  
+    journal={IEEE Transactions on Cognitive Communications and Networking},   
+    title={Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior},   
+    year={2022},  
+    volume={},  
+    number={},  
+    pages={1-1},  
+    doi={10.1109/TCCN.2022.3220766}
 }
 ```
 
