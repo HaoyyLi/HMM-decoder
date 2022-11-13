@@ -37,8 +37,8 @@ The code uses repository from Qiuqiang Kong:
 .
 ├── dataset
     ├── AWGN.mat
-	├── Multipath.mat
-	└── RSC.mat
+    ├── Multipath.mat
+    └── RSC.mat
 ├── img
 ├── src
 	├── matlab-hmm
