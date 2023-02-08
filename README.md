@@ -114,16 +114,17 @@ config.filename = './../dataset/RSC.mat';
 If you use this repository in your research, please cite this paper.
 
 ```
-@ARTICLE{9943994,  
-    author={Li, Haoyu and Wang, Xuan and Liu, Tong and Fang, Dingyi and Liu, Baoying},  
-    journal={IEEE Transactions on Cognitive Communications and Networking},   
-    title={Hybrid HMM Decoder For Convolutional Codes By Joint Trellis-Like Structure and Channel Prior},   
-    year={2022},  
-    volume={},  
-    number={},  
-    pages={1-1},  
-    doi={10.1109/TCCN.2022.3220766}
+@ARTICLE{9943994,
+  author={Li, Haoyu and Wang, Xuan and Liu, Tong and Fang, Dingyi and Liu, Baoying},
+  journal={IEEE Transactions on Cognitive Communications and Networking}, 
+  title={Hybrid HMM Decoder for Convolutional Codes by Joint Trellis-Like Structure and Channel Prior}, 
+  year={2023},
+  volume={9},
+  number={1},
+  pages={58-69},
+  doi={10.1109/TCCN.2022.3220766}
 }
+
 ```
 
 If you are for commercial use, please contact the author.
